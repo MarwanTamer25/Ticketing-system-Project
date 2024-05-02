@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Dashboard</title>
+    <link rel = "icon" href = "C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\TABLOGO.png" type = "image/x-icon">   
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003b7a;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+
+/* Change the color of the links to white */
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Add a smooth transition effect */
+}
+
+nav a:hover {
+    color: #838d92; /* Change the color on hover, adjust the color code as needed */
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, select {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+
+
+.container {
+    margin:auto;
+             display: flex;
+             animation: fade-in 1s ease-in-out;
+        }
+        @keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+aside {
+    flex: 1;
+    background-color: #f0f0f0;
+    padding: 20px;
+
+}
+
+aside a {
+    color: #130d30;
+    text-decoration: none;
+    transition: color 0.3s; /* Add a smooth transition effect */
+}
+
+aside a:hover {
+    color: #001cb8; /* Change the color on hover, adjust the color code as needed */
+}
+main {
+    flex: 6;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+th {
+    background-color: #00185c;
+    color: #fff;
+}
+
+tr:hover {
+    background-color: #ddd;
+}
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+}
+
+.logo img {
+    max-width: 200px; /* Adjust the maximum width as needed */
+    vertical-align: middle;
+}
+
+footer {
+    background-color: #003b7a;
+    color: #fff;
+    text-align: center;
+    padding: 0.2% 0;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+#profile-photo {
+    width: 55px;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+}
+
+#profile-menu {
+    display: none;
+    position: absolute;
+    top: 62px;
+    right: 10px;
+    width: 130px;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#profile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#profile-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#profile-menu li:hover {
+    background-color: #0f9af7;
+}
+
+.profile-container:hover #profile-menu {
+    display: block;
+}
+
+#profile-menu a {
+    text-decoration: none; /* Remove underlines */
+    color: #333; /* Set link color */
+    display: block; /* Make the links block-level elements */
+    padding: 10px;
+}
+
+</style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\LOGO.png" alt="Logo">
+        </div>
+
+        <div class="profile-container">
+            <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\Profile-PIC.jpg" alt="Profile Photo" id="profile-photo">
+        <div id="profile-menu">
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="LoginPage.html">Log Out</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="dashboard.html" id="dashboard-link">Dashboard</a></li>
+                <li><a href="tickets.html" id="tickets-link">Tickets</a></li>
+                <li><a href="users.html" id="users-link">Users</a></li>
+                <li><a href="settings.html" id="settings-link">Settings</a></li>
+            </ul>
+        </nav>
+        
+    </header>
+
+    <div class="container">
+        <aside>
+            <h2>Quick Links</h2>
+            <ul>
+                <li><a href="Create.html">Create Ticket<br></a></li>
+                <li><a href="Tickets.html">View Tickets<br></a></li>
+                <li><a href="Assign.html">Assign Tickets</a></li>
+            </ul>
+        </aside>
+
+        <main>
+            <section class="tickets">
+                <h2>Open Tickets</h2>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Ticket ID</th>
+                            <th>Subject</th>
+                            <th>Assigned to</th>
+                            <th>Status</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>#1234</td>
+                            <td>Digital</td>
+                            <td>Marwan Tamer</td>
+                            <td>Pending</td>
+                            <td>
+                                <button>Replay</button>
+                                <button>Ignore</button>
+                            </td>
+                            <tr>
+                                <td>#1234</td>
+                                <td>Digital</td>
+                                <td>Marwan Tamer</td>
+                                <td>Pending</td>
+                                <td>
+                                    <button>Replay</button>
+                                    <button>Ignore</button>
+                                </td>
+                                <tr>
+                                    <td>#1234</td>
+                                    <td>Digital</td>
+                                    <td>Marwan Tamer</td>
+                                    <td>Pending</td>
+                                    <td>
+                                        <button>Replay</button>
+                                        <button>Ignore</button>
+                                    </td>
+                                    <tr>
+                                        <td>#1234</td>
+                                        <td>Digital</td>
+                                        <td>Marwan Tamer</td>
+                                        <td>Pending</td>
+                                        <td>
+                                            <button>Replay</button>
+                                            <button>Ignore</button>
+                                        </td>
+                                        <tr>
+                                            <td>#1234</td>
+                                            <td>Digital</td>
+                                            <td>Marwan Tamer</td>
+                                            <td>Pending</td>
+                                            <td>
+                                                <button>Replay</button>
+                                                <button>Ignore</button>
+                                            </td>
+                                        </td>
+                                        <tr>
+                                            <td>#1234</td>
+                                            <td>Digital</td>
+                                            <td>Marwan Tamer</td>
+                                            <td>Pending</td>
+                                            <td>
+                                                <button>Replay</button>
+                                                <button>Ignore</button>
+                                            </td></td>
+                                            <tr>
+                                                <td>#1234</td>
+                                                <td>Digital</td>
+                                                <td>Marwan Tamer</td>
+                                                <td>Pending</td>
+                                                <td>
+                                                    <button>Replay</button>
+                                                    <button>Ignore</button>
+                                                </td></td>
+                                                <tr>
+                                                    <td>#1234</td>
+                                                    <td>Digital</td>
+                                                    <td>Marwan Tamer</td>
+                                                    <td>Pending</td>
+                                                    <td>
+                                                        <button>Replay</button>
+                                                        <button>Ignore</button>
+                                                    </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Ticketing System</p>
+    </footer>
+</body>
+</html>

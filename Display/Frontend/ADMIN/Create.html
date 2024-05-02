@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create Ticket</title>
+    <link rel = "icon" href = "C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\TABLOGO.png" type = "image/x-icon">   
+    <link rel="stylesheet" type="text/css" href="styles.css">
+<style>
+/* styles.css */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background-color: #003b7a;
+    color: #fff;
+    text-align: center;
+    padding: 1em 0;
+}
+
+nav ul {
+    list-style: none;
+}
+
+nav li {
+    display: inline;
+    margin: 0 10px;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    transition: color 0.3s; /* Add a smooth transition effect */
+}
+
+nav a:hover {
+    color: #838d92; /* Change the color on hover, adjust the color code as needed */
+}
+.container {
+    display: flex;
+}
+
+main {
+    flex: 4;
+    padding: 20px;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+label {
+    display: block;
+    margin-top: 10px;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+}
+
+button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    margin-top: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #555;
+}
+footer {
+    text-align: center;
+    background-color: #003b7a;
+    color: #fff;
+    padding: 1em 0;
+}
+
+.profile-container {
+    display: flex;
+    align-items: center;
+}
+
+#profile-photo {
+    width: 55px;
+    height: auto;
+    border-radius: 50%;
+    position: absolute;
+    top: 10px;
+    right: 40px;
+    cursor: pointer;
+}
+
+#profile-menu {
+    display: none;
+    position: absolute;
+    top: 62px;
+    right: 10px;
+    width: 130px;
+    background-color: #fff;
+    border: 3px solid #ccc;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#profile-menu ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#profile-menu li {
+    padding: 10px;
+    cursor: pointer;
+}
+
+#profile-menu li:hover {
+    background-color: #0f9af7;
+}
+
+.profile-container:hover #profile-menu {
+    display: block;
+}
+
+#profile-menu a {
+    text-decoration: none; /* Remove underlines */
+    color: #333; /* Set link color */
+    display: block; /* Make the links block-level elements */
+    padding: 10px;
+}
+
+/* Hover Effect for Form Elements */
+.form-group:hover {
+            transform: scale(1.02);
+            transition: transform 0.2s ease-in-out;
+        }
+
+        /* Submit Button Animation */
+        button[type="submit"] {
+            transition: background-color 0.2s ease-in-out, transform 0.2s ease-in-out;
+        }
+
+        button[type="submit"]:hover {
+            background-color: #002d5a;
+            transform: scale(1.05);
+        }
+
+        /* Form Input Focus Effect */
+        input[type="text"]:focus,
+        textarea:focus {
+            border-color: #0f9af7;
+            transition: border-color 0.2s ease-in-out;
+        }
+
+        /* Attachment Input Animation */
+        #attachment:hover {
+             transform: scale(1.05);
+             transition: transform 0.2s ease-in-out;
+        }
+
+        /* Label Animation */
+        label {
+             transition: transform 0.2s ease-in-out;
+        }
+
+        .form-group:hover label {
+    transform: translateY(-5px);
+        }
+</style>
+</head>
+<body>
+    <header>
+        <h1>Create Ticket</h1>
+
+        <div class="profile-container">
+            <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\Profile-PIC.jpg" alt="Profile Photo" id="profile-photo">
+        <div id="profile-menu">
+            <ul>
+                <li><a href="profile.html">Profile</a></li>
+                <li><a href="LoginPage.html">Log Out</a></li>
+            </ul>
+        </div>
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="dashboard.html">Dashboard</a></li>
+                <li><a href="tickets.html">Tickets</a></li>
+                <li><a href="users.html">Users</a></li>
+                <li><a href="settings.html">Settings</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <div class="container">
+        <main>
+            <section class="create-ticket">
+                <h2>Submit a New Ticket</h2>
+                <div class="ticket-form">
+                    <form action="submit_ticket.php" method="post" enctype="multipart/form-data">
+                        <div class="form-group">
+                            <label for="problem-summary">Problem Summary</label>
+                            <input type="text" id="problem-summary" name="problem-summary" required>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="description">Description</label>
+                            <textarea id="description" name="description" rows="4" required></textarea>
+                        </div>
+        
+                        <div class="form-group" id="attachment-group">
+                            <label for="attachment">Attachment</label>
+                            <input type="file" id="attachment" name="attachment">
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="priority">Priority</label>
+                            <select id="priority" name="priority">
+                                <option value="low">Low</option>
+                                <option value="medium">Medium</option>
+                                <option value="high">High</option>
+                            </select>
+                        </div>
+        
+                        <div class="form-group">
+                            <label for="labels">Labels</label>
+                            <input type="text" id="labels" name="labels">
+                        </div>
+                        <div class="button-group">
+                            <button type="submit">Create</button>
+                            
+                        </div>
+            </section>
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy; 2023 Ticket Management</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Si-Vision Ticketing System</title>  
+    <link rel = "icon" href = "C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\TABLOGO.png" type = "image/x-icon">   
+    <link rel="stylesheet" type="text/css" href="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\TABLOGO.png" /> 
+</head>
+<style>body {
+    font-family: Courier New, Monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #003b7a;
+    color: #ffffff;
+    padding: 20px 0;
+    
+}
+
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+     margin-top: 70px;
+}
+.logo img {
+     max-width: 200px; /* Adjust the maximum width as needed */
+     vertical-align: middle;
+     margin-right: 10px;
+ }
+
+.logo h1 {
+     font-size: 30px; 
+     display: inline; /* Display title inline with the logo */
+     vertical-align: middle; /* Align title vertically with the logo */
+ }
+
+footer {
+     position: fixed;
+     bottom: 0;
+     text-align: center;
+     background-color: #003b7a;
+     color: #fff;
+     width:100%;
+
+}
+
+.container {
+     max-width: 1000px;
+     margin: 0 auto;
+     padding: 20px;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     animation: fade-in 1s ease-in-out;
+}
+@keyframes fade-in {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.section {
+     flex: 1;
+     margin: 10px;
+     padding: 20px;
+     background-color: #fff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     text-align: center;
+}
+
+.section h2 {
+     font-size: 24px;
+     margin-bottom: 10px;
+}
+
+.section p {
+     font-size: 16px;
+     color: #555;
+}
+
+.search-box {
+     display: flex;
+     align-items: right;
+     justify-content: right;
+     margin-right: 60px;
+     flex-grow: 1;
+     margin-top: 40px;
+}
+
+ input[type="text"] {
+     width: 20%;
+     padding: 10px;
+     border: none;
+     border-radius: 5px 0 0 5px; /* Rounded left corners */
+}
+
+ button {
+     background-color: #555;
+     color: #fff;
+     border: none;
+     border-radius: 0 5px 5px 0; /* Rounded right corners */
+     padding: 10px 10px;
+     cursor: pointer;
+}
+
+     button i {
+         font-size: 16px; /* Adjust the icon size as needed */
+}
+
+.problem-emoji {
+     font-size: 48px;
+}
+
+.problem-title {
+     font-size: 20px;
+     font-weight: bold;
+     margin-top: 10px;
+}
+
+.profile-container {
+     display: flex;
+     align-items: center;
+}
+
+#profile-photo {
+     width: 55px;
+     height: auto;
+     border-radius: 50%;
+     position: absolute;
+     top: 10px;
+     right: 40px;
+     cursor: pointer;
+}
+
+#profile-menu {
+     display: none;
+     position: absolute;
+     top: 62px;
+     right: 10px;
+     width: 130px;
+     background-color: #fff;
+     border: 3px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#profile-menu ul {
+     list-style-type: none;
+     padding: 0;
+}
+
+#profile-menu li {
+     padding: 10px;
+     cursor: pointer;
+}
+
+#profile-menu li:hover {
+     background-color: #0f9af7;
+}
+
+.profile-container:hover #profile-menu {
+     display: block;
+}
+
+#profile-menu a {
+     text-decoration: none; /* Remove underlines */
+     color: #333; /* Set link color */
+     display: block; /* Make the links block-level elements */
+     padding: 10px;
+}</style>
+<body>
+    <header>
+        
+        <div class="profile-container">
+        <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\Profile-PIC.jpg" alt="Profile Photo" id="profile-photo">
+    <div id="profile-menu">
+        <ul>
+            <li><a href="profile.html">Profile</a></li>
+            <li><a href="requests.html">Requests</a></li>
+            <li><a href="LoginPage.html">Log Out</a></li>
+        </ul>
+    </div>
+    </div>
+        
+            <div class="logo">
+                <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\LOGO.png" alt="Logo">
+                <h1>| CAD Ticketing System</h1>
+            </div>
+
+            <div class="search-box">
+                <input type="text" placeholder="Search...">
+                <button><i class="fas fa-search"></i></button>
+            </div>
+            
+        
+    </header>
+
+    <div class="container">
+        <div class="section">
+            <span class="problem-emoji">📑</span>
+            <h2>Common Requests</h2><br>
+            <a href="CommonProblem1.html">Problem 1</a><br><br>
+            <a href="CommonProblem2.html">Problem 2</a><br><br>
+            <a href="CommonProblem3.html">Problem 3</a><br><br>
+        </div>
+
+        <div class="section">
+            <span class="problem-emoji">📻</span>
+            <h2>Analog</h2>
+            <p>Having issues with analog devices or systems? We're here to assist you.</p>
+            <a href="AnalogProblem.html">Learn More</a>
+        </div>
+
+        <div class="section">
+            <span class="problem-emoji">💻</span>
+            <h2>Digital</h2>
+            <p>Experiencing issues with digital devices or systems? We're here to help!</p>
+            <a href="DigitalProblem.html">Learn More</a>
+        </div>
+
+        <div class="section">
+            <span class="problem-emoji">🛠️</span>
+            <h2>Others</h2>
+            <p>Facing an issues? Reach out to us for expert assistance.</p>
+            <a href="OtherProblem.html">Learn More</a>
+        </div>
+    </div>
+    <footer>
+            &copy; 2023 Ticketing System, All Right Reserved.<br>
+            Designed By <a href="https://www.linkedin.com/in/marwan-tamer-244457244/" target="_blank style="color: white;">Marwan Tamer</a>
+    </footer>
+</body>
+</html>

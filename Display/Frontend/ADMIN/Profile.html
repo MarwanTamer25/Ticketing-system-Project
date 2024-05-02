@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Page</title>
+    <link rel = "icon" href = "C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\TABLOGO.png" type = "image/x-icon">   
+    <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+/* Basic styling for the profile page */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f2f2f2;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+            text-align: center;
+            background-color: #003b7a;
+            color: #ffffff;
+            padding: 20px 0;
+            
+        }
+        .logo {
+            font-size: 10px;
+            font-weight: bold;
+             margin-top: 30px;
+        }
+        .logo img {
+             max-width: 200px; /* Adjust the maximum width as needed */
+             vertical-align: middle;
+             margin-right: 10px;
+         }
+        
+        .logo h1 {
+             font-size: 28px; 
+             display: inline; /* Display title inline with the logo */
+             vertical-align: middle; /* Align title vertically with the logo */
+         }
+footer {
+             position: fixed;
+             bottom: 0;
+             text-align: center;
+             background-color: #003b7a;
+             color: #fff;
+             width:100%;
+
+        }
+
+.container {
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    animation: fadeIn 0.5s ease;
+    display: flex; /* Use flexbox to control layout */
+    justify-content: space-between; /* Align sections on the sides */
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.profile {
+    margin-top: 20px;
+    animation: slideIn 0.5s ease;
+    flex: 1; /* Make the profile section take available space */
+}
+
+.edit-profile {
+    margin-top: 20px;
+    animation: slideIn 0.5s ease;
+    flex: 1; /* Make the edit profile section take available space */
+    margin-left: 20px; /* Add some spacing between profile and edit profile */
+}
+
+.change-password {
+    flex: 1; /* Make the edit profile section take available space */
+    margin-left: 30px; /* Add some spacing between profile and edit profile */
+    margin-top: 20px;
+    animation: slideIn 0.5s ease;
+}
+
+h2 {
+    margin-top: 0;
+}
+
+img {
+    max-width: 170px;
+    border-radius: 60%;
+    margin: 10px 0;
+}
+
+label, input {
+    display: block;
+    margin-bottom: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+
+@keyframes slideIn {
+    from {
+        transform: translateY(-20px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+</style>
+<body>
+    <header>
+        <div class="logo">
+            <a href="dashboard.html">
+            <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\LOGO.png" alt="Logo"></a>
+            <h1>| Profile page</h1>
+        </div>  
+    </header>
+    <div class="container">
+        <section class="profile">
+            <h2>Your Profile</h2>
+            <img src="C:\Users\marwa\OneDrive\Desktop\Display\Frontend\Photos\PROFILE-PIC.jpg" alt="Profile Picture">
+            <p><strong>Name:</strong> Maro</p>
+            <p><strong>Email:</strong> Maro@example.com</p>
+            <p><strong>Location:</strong> Cairo, Egypt</p>
+            <!-- Add more user information here -->
+        </section>
+        
+    
+    
+    </section>
+    </div>
+    <script>
+        // JavaScript to handle password change
+        document.getElementById("change-password-form").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent the default form submission
+
+            // Get current password, new password, and confirm new password values
+            var currentPassword = document.getElementById("current-password").value;
+            var newPassword = document.getElementById("new-password").value;
+            var confirmNewPassword = document.getElementById("confirm-new-password").value;
+
+            // Perform password change validation here
+            if (currentPassword === "123456" && newPassword === confirmNewPassword) {
+                // Passwords match and validation is successful
+                alert("Password changed successfully!");
+                // You can add code here to send the new password to your server for updating
+            } else {
+                // Passwords don't match or validation failed
+                alert("Password change failed. Please check your input.");
+            }
+        });
+    </script>
+    <footer>
+        <p>&copy; 2023 Ticketing System</p>
+    </footer>
+</body>
+</html>
