@@ -1,4 +1,4 @@
-**Ticketing System Project**
+# Ticketing System Project
 
 Welcome to the Ticketing System Project! This README will provide you with an overview of the project, its purpose, features, and how to get started.
 
