@@ -61,6 +61,6 @@ Contributions to the Ticketing System Project are welcome! If you find any bugs,
 This project is licensed under the MIT License. See the `LICENSE` file for more details.
 
 ### Support
-If you encounter any issues or have any questions, please contact [support@example.com](mailto:support@example.com).
+If you encounter any issues or have any questions, please contact me.
 
 Thank you for using the Ticketing System Project! We hope it helps streamline your ticket management process effectively.
