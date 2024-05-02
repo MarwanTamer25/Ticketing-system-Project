@@ -1,0 +1,177 @@
+body {
+    font-family: Courier New, Monospace;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+body, h1 {
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    text-align: center;
+    background-color: #003b7a;
+    color: #ffffff;
+    padding: 20px 0;
+    
+}
+
+.logo {
+    font-size: 10px;
+    font-weight: bold;
+     margin-top: 70px;
+}
+.logo img {
+     max-width: 200px; /* Adjust the maximum width as needed */
+     vertical-align: middle;
+     margin-right: 10px;
+ }
+
+.logo h1 {
+     font-size: 30px; 
+     display: inline; /* Display title inline with the logo */
+     vertical-align: middle; /* Align title vertically with the logo */
+ }
+
+footer {
+     position: fixed;
+     bottom: 0;
+     text-align: center;
+     background-color: #003b7a;
+     color: #fff;
+     width:100%;
+
+}
+
+.container {
+     max-width: 1000px;
+     margin: 0 auto;
+     padding: 20px;
+     display: flex;
+     justify-content: space-between;
+     flex-wrap: wrap;
+     animation: fade-in 1s ease-in-out;
+}
+@keyframes fade-in {
+from {
+opacity: 0;
+transform: translateY(-20px);
+}
+to {
+opacity: 1;
+transform: translateY(0);
+}
+}
+.section {
+     flex: 1;
+     margin: 10px;
+     padding: 20px;
+     background-color: #fff;
+     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+     border-radius: 5px;
+     text-align: center;
+}
+
+.section h2 {
+     font-size: 24px;
+     margin-bottom: 10px;
+}
+
+.section p {
+     font-size: 16px;
+     color: #555;
+}
+
+.search-box {
+     display: flex;
+     align-items: right;
+     justify-content: right;
+     margin-right: 60px;
+     flex-grow: 1;
+     margin-top: 40px;
+}
+
+ input[type="text"] {
+     width: 20%;
+     padding: 10px;
+     border: none;
+     border-radius: 5px 0 0 5px; /* Rounded left corners */
+}
+
+ button {
+     background-color: #555;
+     color: #fff;
+     border: none;
+     border-radius: 0 5px 5px 0; /* Rounded right corners */
+     padding: 10px 10px;
+     cursor: pointer;
+}
+
+     button i {
+         font-size: 16px; /* Adjust the icon size as needed */
+}
+
+.problem-emoji {
+     font-size: 48px;
+}
+
+.problem-title {
+     font-size: 20px;
+     font-weight: bold;
+     margin-top: 10px;
+}
+
+.profile-container {
+     display: flex;
+     align-items: center;
+}
+
+#profile-photo {
+     width: 55px;
+     height: auto;
+     border-radius: 50%;
+     position: absolute;
+     top: 10px;
+     right: 40px;
+     cursor: pointer;
+}
+
+#profile-menu {
+     display: none;
+     position: absolute;
+     top: 62px;
+     right: 10px;
+     width: 130px;
+     background-color: #fff;
+     border: 3px solid #ccc;
+     border-radius: 5px;
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+#profile-menu ul {
+     list-style-type: none;
+     padding: 0;
+}
+
+#profile-menu li {
+     padding: 10px;
+     cursor: pointer;
+}
+
+#profile-menu li:hover {
+     background-color: #0f9af7;
+}
+
+.profile-container:hover #profile-menu {
+     display: block;
+}
+
+#profile-menu a {
+     text-decoration: none; /* Remove underlines */
+     color: #333; /* Set link color */
+     display: block; /* Make the links block-level elements */
+     padding: 10px;
+}
+
